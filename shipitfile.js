@@ -17,7 +17,7 @@ module.exports = function shipitConfig(shipit) {
       shallowClone: true,
       yarn: {
         remote: true,
-        installFlags: ['--production'],
+        cmd: 'client:build'
       },
     },
     prod: {
@@ -37,5 +37,10 @@ module.exports = function shipitConfig(shipit) {
   shipit.on('deployed', () => {
     shipit.start('pm2-reload');
     shipit.emit('reloaded');
+  });
+
+  shipit.on('yarn_installed', () => {
+    shipit.start('yarn:run');
+    shipit.emit('built');
   });
 };
