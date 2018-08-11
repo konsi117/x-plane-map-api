@@ -11,8 +11,6 @@ const headers = (req, res, next) => {
   next();
 };
 
-let socketId = 0;
-
 const formatPlaneData = planeList => mapValues(
   planeList,
   item => pick(item, ['name', 'altitude', 'longitude', 'latitude', 'speed', 'heading', 'icon']),
@@ -52,16 +50,9 @@ class MapServer {
 
   listen(port) {
     this.server = http.createServer(this.app);
-    this.server.on('connection', this.registerSocket.bind(this));
     this.server.listen(port, null, null, () => {
       console.log(`Map server now listening on port ${port}`);
     });
-  }
-
-  registerSocket(socket) {
-    const id = socketId++;
-    this.sockets[id] = socket;
-    socket.on('close', () => { delete this.sockets[id]; });
   }
 }
 
