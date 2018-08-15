@@ -1,7 +1,7 @@
 /* eslint no-underscore-dangle: ["error", { "allow": ["_zoom"] }] */
 
 import React, { Component } from 'react';
-import { Map as LeafletMap, LayersControl, TileLayer } from 'react-leaflet';
+import { Map as LeafletMap, LayersControl, TileLayer, Marker } from 'react-leaflet';
 import PropTypes from 'prop-types';
 
 import { POLYLINE_OPTIONS, BUILT_ICONS } from '../constants';
