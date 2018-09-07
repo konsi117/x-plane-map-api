@@ -28,6 +28,15 @@ module.exports = function shipitConfig(shipit) {
         },
       ],
     },
+    konstantin: {
+      servers: [
+        {
+          host: 'konstantin',
+          user: 'root',
+        },
+      ],
+      deployTo: '/var/www/x-plane-map-api',
+    },
   });
 
   shipit.task('pm2-reload', () => {
