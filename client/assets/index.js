@@ -1,4 +1,9 @@
-export { default as airliner } from './Airliner.svg';
-export { default as civil } from './Civil.svg';
-export { default as fighter } from './Fighter.svg';
-export { default as helicopter } from './Helicopter.svg';
+export { default as helicopter1 } from './vector1.svg';
+export { default as helicopter2 } from './vector2.svg';
+export { default as helicopter3 } from './vector3.svg';
+export { default as helicopter4 } from './vector4.svg';
+export { default as helicopter5 } from './vector5.svg';
+export { default as helicopter6 } from './vector6.svg';
+export { default as helicopter7 } from './vector7.svg';
+export { default as helicopter8 } from './vector8.svg';
+export { default as helicopter9 } from './vector9.svg';
