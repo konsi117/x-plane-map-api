@@ -1,7 +1,9 @@
 /* eslint react/jsx-one-expression-per-line: 0, react/jsx-no-bind: 0 */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { List, ListItem, ListSubheader } from '@material-ui/core';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListSubheader from '@material-ui/core/ListSubheader';
 
 import PlaneRow from './PlaneRow';
 import { PERIOD } from '../constants';

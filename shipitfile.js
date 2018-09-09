@@ -36,6 +36,7 @@ module.exports = function shipitConfig(shipit) {
         },
       ],
       deployTo: '/var/www/x-plane-map-api',
+      branch: 'konstantin-icons'
     },
   });
 
