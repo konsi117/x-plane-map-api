@@ -10,3 +10,6 @@ export { default as helicopter9 } from './helicopter9.png';
 export { default as helicopter10 } from './helicopter10.png';
 export { default as helicopter11 } from './helicopter11.png';
 export { default as helicopter12 } from './helicopter12.png';
+export { default as helicopter13 } from './helicopter13.png';
+export { default as helicopter14 } from './helicopter14.png';
+export { default as helicopter15 } from './helicopter15.png';
