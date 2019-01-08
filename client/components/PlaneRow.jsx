@@ -11,12 +11,13 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import ShowChartsIcon from '@material-ui/icons/ShowChart';
+import ReplayIcon from '@material-ui/icons/Replay';
 import ClearIcon from '@material-ui/icons/Clear';
 
 import EditableText from './EditableText';
 import { ICONS } from '../constants';
 
-const makeFloat = float => float.toLocaleString('en-us', { maximumFractionDigits: 0 });
+const makeFloat = float => (float || 0).toLocaleString('en-us', { maximumFractionDigits: 0 });
 
 const makeSubtext = (alt, heading, speed) => `${makeFloat(alt)} ft • ${makeFloat(heading)}° • GS ${makeFloat(speed)} kts`;
 
@@ -97,6 +98,18 @@ class PlaneRow extends Component {
                 primary="Clear Trace"
               />
             </MenuItem>
+            <MenuItem
+              dense
+              onClick={() => { this.handleMenuClose(); this.props.onPlaneReplayMode(); }}
+            >
+              <ListItemIcon>
+                <ReplayIcon />
+              </ListItemIcon>
+              <ListItemText
+                inset
+                primary="Enter Replay mode"
+              />
+            </MenuItem>
           </Menu>
         </ListItemSecondaryAction>
       </ListItem>
@@ -110,6 +123,7 @@ PlaneRow.propTypes = {
   onPlaneIconChange: PropTypes.func.isRequired,
   onPlaneTraceToggle: PropTypes.func.isRequired,
   onPlaneTraceClear: PropTypes.func.isRequired,
+  onPlaneReplayMode: PropTypes.func.isRequired,
   onPlaneRename: PropTypes.func.isRequired,
   plane: PropTypes.shape({
     isTraceActive: PropTypes.bool.isRequired,
@@ -122,3 +136,4 @@ PlaneRow.propTypes = {
 };
 
 export default PlaneRow;
+
