@@ -10,7 +10,7 @@ module.exports = function shipitConfig(shipit) {
     default: {
       workspace: '/tmp/x-plane-map-api',
       deployTo: '/home/fouc/x-plane-map-api',
-      repositoryUrl: 'https://github.com/foucdeg/x-plane-map-api',
+      repositoryUrl: 'https://github.com/konsi117/x-plane-map-api',
       ignores: ['.git'],
       keepReleases: 3,
       deleteOnRollback: false,
