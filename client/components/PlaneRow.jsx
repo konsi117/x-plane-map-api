@@ -97,7 +97,6 @@ class PlaneRow extends Component {
                 primary="Clear Trace"
               />
             </MenuItem>
- 
           </Menu>
         </ListItemSecondaryAction>
       </ListItem>
@@ -111,7 +110,6 @@ PlaneRow.propTypes = {
   onPlaneIconChange: PropTypes.func.isRequired,
   onPlaneTraceToggle: PropTypes.func.isRequired,
   onPlaneTraceClear: PropTypes.func.isRequired,
-  onPlaneReplayMode: PropTypes.func.isRequired,
   onPlaneRename: PropTypes.func.isRequired,
   plane: PropTypes.shape({
     isTraceActive: PropTypes.bool.isRequired,
@@ -123,6 +121,4 @@ PlaneRow.propTypes = {
   }).isRequired,
 };
 
-
-
-
+export default PlaneRow;
